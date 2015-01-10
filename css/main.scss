@@ -4,28 +4,27 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family:  "droid-serif", serif;
-$base-font-size:    16px;
+$base-font-family:  "expo-serif-pro", serif;
+$base-font-size:    18px;
 $small-font-size:   $base-font-size * 0.875;
-$base-line-height:  1.5;
-$brand-font-family: "adelle", Helvetica, Arial;
-$brand-font-size:   2.5em;
+$base-line-height:  1.6;
+$brand-font-family: "omnes-pro", Helvetica, Arial;
+$brand-font-size:   5em;
 $spacing-unit:      30px;
 
-$title-font-family: "omnes-pro", Helvetica, Arial;
+$title-font-family: "adelle", Helvetica, Arial;
 
 
-$text-color:        #111;
-$background-color:  #FFFFFF;
+$text-color:        #354B5E;
+$background-color:  #DCDDD8;
 $background-light:  lighten($background-color, 10%);
 $background-dark:   #343642;
-$brand-color:       #348899;
+$brand-color:       #D74B4B;
                        
-$foreground-color:  #962D3E;
-
+$foreground-color:  #D74B4B;
+$faded-out-color:   #BEBFBB;
 // Width of the content area
 $content-width:     800px;
-
 $on-palm:           600px;
 $on-laptop:         800px;
 
@@ -53,8 +52,116 @@ $on-laptop:         800px;
         "syntax-highlighting"
 ;
 
+.site-header {
+    padding: 2em;
+    box-sizing: border-box;
+    
+    nav {
+        display: none;
+    }
+}
+
 .site-title {
     font-family: $brand-font-family;
-    font-size: $brand-font-size;
+    font-size: 2.5em;
     color: $brand-color;
+    font-weight: 200;
+    line-height: 1.1em;
+    vertical-align: bottom;
+    border: 3px solid rgba(#444444, 0.2);
+    letter-spacing: .05em;
+    display: inline-block;
+    padding: 0 .2em .2em .2em;
+    
+    &:hover {
+        text-decoration: none;
+        background: $brand-color;
+        color: #ffffff;
+        border-color: #fff;
+    };
 }
+
+.site-footer {
+    color: $faded-out-color;
+    
+    
+    a {
+        color: darken(#BEBFBB, 10%);
+        text-decoration: none;
+        
+        path {
+            fill: darken(#BEBFBB, 10%);
+        }
+    }
+    
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0 2em;
+        
+        li {
+            float: left;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+    }
+}
+
+.home {
+    
+    .page-heading {
+        display: none;
+    }
+    
+    .post-list {
+        list-style: none;
+        padding: 2em;
+        margin: 0;
+        
+        
+        .post-meta {
+            display: none;
+        }
+         
+        li {
+            position: relative;
+            padding-bottom: 1em;
+            
+            h2 a {
+                color: $foreground-color;
+            }
+        
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 50%;
+                margin-left: -25%;
+                height: 1px;
+                background: rgba(#444444, 0.1);
+            }
+        }
+        
+
+        
+    }
+    
+    .rss-subscribe {
+        display: none;
+    }
+}
+
+.post {
+    padding: 2em;
+    margin: 0;
+    
+    .post-title {
+        font-size: 1.8em;
+    }
+    
+    .post-meta {
+        color: $faded-out-color;
+    }
+}
+

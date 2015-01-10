@@ -1,19 +1,13 @@
 <header class="site-header">
 
-  <div class="wrapper">
+  <a class="site-title" href="{{ site.baseurl }}/">take<br />form</a>
 
-    <a class="site-title" href="{{ site.baseurl }}/">takeform</a>
-
-    <nav class="site-nav">
-      <ul>
-        {% for page in site.pages %}
-          {% if page.title %}
-          <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </nav>
-
-  </div>
+  <nav class="site-nav">
+    <ul>
+      {% for page in site.pages %}
+        {% if page.title %}<li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>{% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
 
 </header>

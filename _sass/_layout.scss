@@ -1,196 +1,23 @@
-/**
- * Site header
- */
-.site-header {
-    background-color: $background-dark;
-    // Positioning context for the mobile navigation icon
-    position: relative;
+header.site-header {
+    position: fixed;
+    width: 200px;
+    height: 100%;
 }
 
-.site-title {
-    font-size: 26px;
-    letter-spacing: -1px;
-    margin: .5em 0;
+section.page {
+    width: 100%;
     float: left;
-    
-    &:hover {
-        text-decoration: none;
-    }
+    box-sizing: border-box;
+    padding-left: 200px;
+    max-width: 800px;
 }
 
-.site-nav {
-    float: right;
-    
-
-    .menu-icon {
-        display: none;
-    }
-    
-    ul {
-        list-style: none;
-        line-height: 56px;
-        
-        li {
-            float: left;
-            margin-right: 10px;
-            
-            a {
-                float: left;
-                color: $background-color;
-                line-height: 56px;
-            }
-            
-            &:last-of-type {
-                margin-right: 0;
-            }
-        }
-    }
-
-    .page-link {
-
-    }
-
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: 30px;
-        background-color: $background-color;
-        border: 1px solid $background-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $background-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-        }
-    }
-}
-
-
-
-/**
- * Site footer
- */
 .site-footer {
-    padding: $spacing-unit 0;
-}
-
-.footer-heading {
-    font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
-}
-
-.site-footer ul {
-    list-style: none;
-    margin-left: 0;
-}
-
-
-
-
-/**
- * Page content
- */
-.page-content {
-    background: $background-color;
-    padding: $spacing-unit 0;
-}
-
-.page-heading {
-    font-size: 20px;
-}
-
-.post-list {
-    margin-left: 0;
-    list-style: none;
-
-    > li {
-        margin-bottom: $spacing-unit;
-    }
-}
-
-.post-meta {
-    font-size: $small-font-size;
-    color: $foreground-color;
-}
-
-.post-link {
     display: block;
-    font-size: 24px;
-}
-
-
-
-/**
- * Posts
- */
-.post-header {
-    margin-bottom: $spacing-unit;
-}
-
-.post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
-}
-
-.post-content {
-    margin-bottom: $spacing-unit;
-
-    h2 {
-        font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
-    }
-
-    h3 {
-        font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
+    float: left;
+    box-sizing: border-box;
+    clear: both;
+    width: 100%;
+    margin: 0 0 2em 0;
+    padding-left: 200px;
 }
