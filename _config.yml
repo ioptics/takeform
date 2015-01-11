@@ -1,0 +1,12 @@
+# Site settings
+title: takeform // the home of pete lambert
+email: hi@takeform.co.uk
+description: > # this means to ignore newlines until "baseurl:"
+  The online home, portfolio and blog of Pete Lambert.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://takeform.co.uk" # the base hostname & protocol for your site
+twitter_username: ioptics
+github_username:  ioptics
+
+# Build settings
+markdown: kramdown
